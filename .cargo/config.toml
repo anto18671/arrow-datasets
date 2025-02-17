@@ -1,0 +1,10 @@
+[build]
+rustflags = [
+    "-C", "target-cpu=native",
+    "-C", "opt-level=3",
+    "-C", "llvm-args=--inline-threshold=1000",
+    "-C", "codegen-units=1",
+    "-C", "lto=fat",
+    "-C", "embed-bitcode=yes",
+    "-Z", "dylib-lto"
+]
